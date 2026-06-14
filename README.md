@@ -38,7 +38,6 @@ To understand core Microsoft Azure cloud concepts and architect a secure, metada
 * **Metrics:** Total processing runtime took **36 seconds** (`Get Metadata1`: 16s | `Copy data1`: 20s) with a status of **Succeeded**.
 * **Deliverables:**
 ![Pipeline Execution View](Pipeline_execution.png)
-![Successful Debug Execution Run Logs](Output.png)
 
 ### Task 6: Identity and Access Management (IAM) Role Configuration
 * **Action:** Secured access boundaries without exposing root passwords using Azure Role-Based Access Control (RBAC). Provided the ADF system identity explicit **Storage Blob Data Contributor** and **Storage Blob Data Reader** privileges over the storage account.
@@ -52,5 +51,6 @@ The data engineering target objective has been fully achieved. The engineered ar
 1. **Pre-Validation:** The pipeline reads incoming block blobs and parses structural boundaries without triggering hard failure exits using Metadata verification.
 2. **Replication & Execution:** Upon successful verification, the engine maps parameters row-by-row, dynamically creating a physical `output/` directory inside the blob namespace containing the perfectly preserved dataset file.
 3. **Enterprise Security:** Infrastructure data streams remain identity-isolated using native platform RBAC assignments rather than public exposure tokens.
+![Successful Debug Execution Run Logs](Output.png)
 
-**Verified Completion Status:** SUCCESSFUL (100% Objectives Satisfied)
+**Verified Completion Status:** SUCCESSFUL 
